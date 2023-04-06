@@ -17,13 +17,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/ai-list/ai-list.module').then(m => m.AiListModule)
   },
   {
-    path: 'ai-detail/:id',
+    path: 'ai-detail/:_id',
     loadChildren: () => import('./pages/ai-detail/ai-detail.module').then(m => m.AiDetailModule)
   },{
     path: 'dev-list',
     loadChildren: () => import('./pages/dev-list/dev-list.module').then(m => m.DevListModule)
   },{
-    path: 'dev-detail/:id',
+    path: 'dev-detail/:_id',
     loadChildren: () => import('./pages/dev-detail/dev-detail.module').then(m => m.DevDetailModule)
   },
   {

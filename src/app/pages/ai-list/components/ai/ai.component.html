@@ -1,0 +1,23 @@
+<p>ai works!</p>
+
+<div
+*ngIf="aiToShow"
+>
+<img src= "{{ aiToShow.logo }} " alt="">
+<!-- <p>ID: {{ aiToShow._id }}</p> -->
+<p>NAME: {{ aiToShow.name }}</p>
+<p>CATEGORY: {{ aiToShow.category }}</p>
+<!-- <p>YEAR: {{ aiToShow.year }}</p> -->
+<!-- <p>DESCRIPTION: {{ aiToShow.description }}</p> -->
+<!-- <p>PRICE: {{ aiToShow.price }}</p> -->
+<!-- <a href="{{ aiToShow.link }}" target="_blank">LINK</a> -->
+<div>
+
+<button 
+     (click)="navigateToDetail(aiToShow._id)">
+    INFO
+</button>
+
+</div>
+
+</div>

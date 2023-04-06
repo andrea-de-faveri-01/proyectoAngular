@@ -1,0 +1,9 @@
+.link {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    
+    &--active {
+        text-decoration: underline;
+    }
+}

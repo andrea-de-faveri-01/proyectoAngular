@@ -1,1 +1,14 @@
 <p>ai-list works!</p>
+
+<input 
+    [(ngModel)]="inputValue"
+    (input)="filterAis()"
+    >
+
+<app-ai
+*ngFor="let ai of ais"
+[aiToShow]="ai"
+></app-ai>
+
+
+
