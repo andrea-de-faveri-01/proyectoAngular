@@ -7,11 +7,11 @@ export const navBarLinks: NavBarLink[] = [
 },
 {
     url: 'ai-list',
-    content: "Ais"
+    content: "AI list"
 },
 {
     url: 'dev-list',
-    content: "Devs"
+    content: "Dev list"
 },
 
 ];

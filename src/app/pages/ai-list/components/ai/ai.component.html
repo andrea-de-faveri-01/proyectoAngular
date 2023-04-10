@@ -3,7 +3,7 @@
 <div
 *ngIf="aiToShow"
 >
-<img src= "{{ aiToShow.logo }} " alt="">
+<img src= "{{ aiToShow.logo }}"  alt="">
 <!-- <p>ID: {{ aiToShow._id }}</p> -->
 <p>NAME: {{ aiToShow.name }}</p>
 <p>CATEGORY: {{ aiToShow.category }}</p>
@@ -17,7 +17,14 @@
      (click)="navigateToDetail(aiToShow._id)">
     INFO
 </button>
-
+<button 
+     (click)="navigateToEditElement(aiToShow._id)">
+    EDIT
+</button>
+<button
+            class="product__button product__button--remove"
+            (click)="removeAi()"
+        >Remove</button>
 </div>
 
 </div>

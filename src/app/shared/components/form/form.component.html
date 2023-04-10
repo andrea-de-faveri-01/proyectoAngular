@@ -1,0 +1,95 @@
+<div class="form-container">
+<form 
+*ngIf="aiForm"
+[formGroup]="aiForm"
+(submit)="handleAi()"
+>
+<div>
+    <input 
+    placeholder="Name"
+    formControlName="name">
+
+    <p
+    *ngIf="!aiForm.get('name')?.valid && aiForm.get('name')?.touched && showErrors"
+    >Required</p>
+</div>
+
+<div>
+    <select 
+    formControlName="category">
+
+    <option *ngFor="let option of aiCategoriesOptions"
+    [value]="option.value"
+    >{{ option.text }}</option>
+
+   </select>
+    <p
+    *ngIf="!aiForm.get('category')?.valid  && aiForm.get('category')?.touched && showErrors"
+    >Required</p>
+</div>
+
+<div>
+    <input 
+    placeholder="Logo"
+    formControlName="logo">  
+</div>
+
+<div>
+    <input 
+    placeholder="Year"
+    formControlName="year">  
+
+    <p
+    *ngIf="!aiForm.get('year')?.valid  && aiForm.get('year')?.touched && showErrors"
+    >
+    <span *ngIf="aiForm.get('year')?.errors?.['required']">Required</span>
+    <span *ngIf="aiForm.get('year')?.errors?.['min']">The year cannot be earlier than 2000</span>
+</p>
+</div>
+
+<div>
+    <input 
+    placeholder="Lenguage"
+    formControlName="lenguage">  
+</div>
+
+<div>
+    <textarea
+    placeholder="Description"
+    formControlName="description"  
+    cols="19" rows="10"></textarea>
+    <p
+    *ngIf="!aiForm.get('description')?.valid  && aiForm.get('description')?.touched && showErrors"
+    >
+    <span *ngIf="aiForm.get('description')?.errors?.['required']">Required</span>
+    <span *ngIf="aiForm.get('description')?.errors?.['maxlength']">Max length
+        150 characters</span>
+
+
+</p>
+</div>
+
+<div>
+    <input 
+    placeholder="Link"
+    formControlName="link"> 
+    
+    <p
+    *ngIf="!aiForm.get('link')?.valid  && aiForm.get('link')?.touched && showErrors"
+    >Required</p>
+</div>
+
+<div>
+    <input 
+    placeholder="Price"
+    formControlName="price">  
+
+    <p
+    *ngIf="!aiForm.get('price')?.valid  && aiForm.get('price')?.touched && showErrors"
+    >Required</p>
+</div>
+<button type="submit"> {{ isEditMode ? 'EDIT' : 'POST'}} </button>
+<p *ngIf="hasSuccess">Congratulations! The item has been added to the <a [routerLink]="['../ai-list']">list</a></p>
+</form>
+ <img class="form-container__img" [src]="imgSrc" alt="logo">
+</div>

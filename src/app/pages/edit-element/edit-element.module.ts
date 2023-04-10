@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CreateElementRoutingModule } from './create-element-routing.module';
-import { CreateElementComponent } from './create-element.component';
+import { EditElementRoutingModule } from './edit-element-routing.module';
+import { EditElementComponent } from './edit-element.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
   declarations: [
-    CreateElementComponent
+    EditElementComponent
   ],
   imports: [
     CommonModule,
-    CreateElementRoutingModule,
+    EditElementRoutingModule,
     SharedModule
   ]
 })
-export class CreateElementModule { }
+export class EditElementModule { }

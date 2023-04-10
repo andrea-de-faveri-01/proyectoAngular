@@ -27,6 +27,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/dev-detail/dev-detail.module').then(m => m.DevDetailModule)
   },
   {
+    path: 'create-element',
+    loadChildren: () => import('./pages/create-element/create-element.module').then(m => m.CreateElementModule)
+  },
+  {
+    path: 'edit-element/:_id',
+    loadChildren: () => import('./pages/edit-element/edit-element.module').then(m => m.EditElementModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/not-found/not-found.module').then(m => m.NotFoundModule)
   }

@@ -1,7 +1,7 @@
+import { AisService } from './../../core/service/ais/ais.service';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { aisData } from 'src/app/core/service/ais/models/api-ais.data';
-import { ApiAiI } from 'src/app/core/service/ais/models/api-ais.interface';
+import { AiI } from 'src/app/core/service/ais/models/api-ais.interface';
 
 @Component({
   selector: 'app-ai-detail',
@@ -10,13 +10,17 @@ import { ApiAiI } from 'src/app/core/service/ais/models/api-ais.interface';
 })
 export class AiDetailComponent {
 
-  public aiToShow?: ApiAiI;
+  public aiToShow?: AiI;
 
   constructor(
-    private actvateRoute: ActivatedRoute
+    private actvateRoute: ActivatedRoute,
+    private aisService : AisService
   ) {
     this.actvateRoute.params.subscribe((params) => {
-this.aiToShow = aisData.find(ai => ai._id === params["_id"])
+      const aiId = params['_id'];
+      this.aisService.getAiById(aiId).subscribe((aiToShow) => {
+        this.aiToShow = aiToShow
+      });
     });
   }
 }

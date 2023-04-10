@@ -4,11 +4,13 @@
     [(ngModel)]="inputValue"
     (input)="filterAis()"
     >
-
+<div
+*ngIf="ais"
+>
 <app-ai
 *ngFor="let ai of ais"
 [aiToShow]="ai"
 ></app-ai>
-
+</div>
 
 
