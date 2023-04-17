@@ -1,4 +1,17 @@
+// .home-container {
+//   margin: 50px 130px 30px 130px;
+//   text-align: center;
+// }
+
 .home-container {
-  margin: 50px 130px 30px 130px;
-  text-align: center;
-}
+    margin: 5% 10% 3% 10%;
+    text-align: center;
+  }
+  
+  
+  @media (max-width: 600px) {
+    .home-container {
+      margin: 30px 5%;
+      text-align: center;
+    }
+  }
