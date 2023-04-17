@@ -74,3 +74,10 @@
 img:hover {
   filter: grayscale(0%);
 }
+
+@media (max-width: 600px) {
+  .info-logo{
+  width: 182px;
+  height: 133px;
+  }
+}
