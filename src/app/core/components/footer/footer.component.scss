@@ -1,0 +1,27 @@
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    
+}
+
+.about {
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    margin-left: auto;
+}
+social-icons svg {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+    margin-right: 10px;
+  }
+  img {
+    width: 30px;
+  height: 30px;
+  fill: #333;
+  }
