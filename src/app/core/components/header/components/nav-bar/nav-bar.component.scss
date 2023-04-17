@@ -1,7 +1,26 @@
+// .nav-container {
+//   text-align: center;
+//   height: 60px;
+// }
+
 .nav-container {
-  text-align: center;
-  height: 60px;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+  }
+
+  @media (max-width: 600px) {
+    .nav-container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .link {
+      margin: 10px 0;
+    }
+  }
+  
 
 .link {
   margin: 30px;
@@ -18,3 +37,5 @@
 .link:hover {
   font-size: xx-large;
 }
+
+
