@@ -23,18 +23,22 @@
     }
   }
   
-  .link:hover {
-    font-size: 5vw;
+  @media (hover: hover) {
+    .link:hover {
+      font-size: 5vw;
+    }
   }
 
   @media (max-width: 600px) {
     .nav-container {
-      flex-direction: column;
+      flex-direction: raw;
       height: auto;
+      
     }
   
     .link {
       margin: 4% 0;
+      font-size: 3.5vw;
     }
   
     .nav-container {
