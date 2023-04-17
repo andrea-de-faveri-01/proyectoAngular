@@ -1,0 +1,55 @@
+.detail {
+    margin-top: 20px;
+    border: 1px solid black;
+    border-right: none;
+    border-radius: 15px 0px 0px 15px;
+    overflow: auto;
+  }
+  
+  .detail-logo {
+    overflow: auto;
+    float: left;
+    width: 450px;
+    height: 450px;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 15px 0px 0px 15px;
+  
+  }
+  .detail-cont {
+    padding: 15px;
+  }
+  
+  .detail-id {
+    
+    list-style: none;
+    
+    margin-bottom: 2px;
+  }
+
+  .detail-btn {
+    margin-left: 35px;
+    border: 1px solid;
+    width: 250px;
+    border-radius: 0px 10px 10px 0px ;
+    cursor: pointer;
+  }
+  
+  .detail-btn:hover{
+    background-color: rgb(191, 219, 191);
+  }
+  
+  .detail p {
+    text-transform: capitalize;
+    overflow: auto;
+    margin: 0;
+    padding: 15px;
+    padding-right: 100px;
+
+  }
+
+  .detail-link {
+    
+   
+    font-size: xx-large;
+  }

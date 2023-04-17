@@ -1,16 +1,18 @@
-<p>ai-detail works!</p>
-
 <div
+class="detail font"
 *ngIf="aiToShow"
 >
-<img src= "{{ aiToShow.logo }}"   alt="">
+
+<img class="detail-logo"  src= "{{ aiToShow.logo }}"   alt="">
+<div class="info-box">
 <p>ID: {{ aiToShow._id }}</p>
 <p>NAME: {{ aiToShow.name }}</p>
 <p>CATEGORY: {{ aiToShow.category }}</p>
 <p>YEAR: {{ aiToShow.year }}</p>
 <p>DESCRIPTION: {{ aiToShow.description }}</p>
 <p>PRICE: {{ aiToShow.price }}</p>
-<a href="{{ aiToShow.link }}" target="_blank">LINK</a>
+</div>
+<a class="detail-link" href="{{ aiToShow.link }}" target="_blank">LINK</a>
 
 
 </div>

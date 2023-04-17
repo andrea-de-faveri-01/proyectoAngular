@@ -1,0 +1,85 @@
+
+.card{
+  border-top: 1px solid;
+    border-radius: 15px 0px;
+    margin-top: 10px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+ 
+  display: grid;
+}
+
+
+
+.info-logo {
+  width: 273px;
+    height: 200px;
+    border-left: 1px solid;
+    border-radius: 15px 0px 0px 0px ;
+    object-fit: cover;
+  
+  
+}
+
+.name {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 300;
+  margin-left: 10px;
+  margin-top: 95px;
+  
+}
+
+.name:hover {
+  font-size: large;
+  font-weight: 800;
+  cursor: default;
+  
+}
+
+
+.cat {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 300;
+  margin-left: 10px;
+  margin-top: 95px;
+ 
+}
+
+.cat:hover {
+  font-size: large;
+  font-weight: 800;
+  cursor: default;
+  
+}
+
+.card-button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border:  1px solid black;
+  border-radius: 0px 0px 0px 15px;
+}
+.card-button button {
+  width: 33%;
+  padding: 5px;
+  border: none;
+  background-color: #f1f1f1;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.card-button__info {
+  border-radius: 15px 0 0 15px;
+}
+
+.card-button__delete {
+  
+  color: red;
+ 
+  
+}

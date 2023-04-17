@@ -1,14 +1,8 @@
-<p>dev-list works!</p>
-
-<input 
-    [(ngModel)]="inputValue"
-    (input)="filterDevs()"
-    >
-<div
-*ngIf="devs"
->
-<app-dev
-*ngFor="let dev of devs"
-[devToShow]="dev"
-></app-dev>
+<div class="list font">
+    <div class="box">
+        <input class="box-search" placeholder="Type a Dev name" [(ngModel)]="inputValue" (input)="filterDevs()">
+    </div>
+    <div *ngIf="devs">
+        <app-dev *ngFor="let dev of devs" [devToShow]="dev"></app-dev>
+    </div>
 </div>

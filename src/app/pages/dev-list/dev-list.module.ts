@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     DevListComponent,
-    DevComponent
+    DevComponent,
   ],
   imports: [
     CommonModule,

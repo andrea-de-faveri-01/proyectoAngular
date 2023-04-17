@@ -13,10 +13,10 @@ export class EditElementComponent {
   public ai?: AiI;
 
 constructor(
-  private ActivatedRoute: ActivatedRoute,
+  private activatedRoute: ActivatedRoute,
   private aisService: AisService
   ) {
-  this.ActivatedRoute.params.subscribe((params) => {
+  this.activatedRoute.params.subscribe((params) => {
      const aiId = params['_id'];
      this.aisService.getAiById(aiId).subscribe((ai) => {
       this.ai = ai;
