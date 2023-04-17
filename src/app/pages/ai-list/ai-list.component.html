@@ -3,19 +3,7 @@
         <input class="box-search" placeholder="Type an AI name, i.e. HAL 9000" [(ngModel)]="inputValue"
             (input)="filterAis()">
     </div>
-    <!-- <div
-class="list-info"
->
-<h4
-class="list-info__1"
->Logo</h4>
-<h4
-class="list-info__2"
->Name</h4>
-<h4
-class="list-info__3"
->Category</h4>
-</div> -->
+
     <div class="ai-list" *ngIf="ais">
         <app-ai *ngFor="let ai of ais" [aiToShow]="ai"></app-ai>
     </div>

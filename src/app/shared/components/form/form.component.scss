@@ -1,10 +1,10 @@
 .form-container {
-    display: flex;
+  display: flex;
 
-    &__img {
-        height: 400px;
-        width: auto;
-        object-fit: cover;
-        margin-left: 40px;
-    }
+  &__img {
+    height: 400px;
+    width: auto;
+    object-fit: cover;
+    margin-left: 40px;
+  }
 }

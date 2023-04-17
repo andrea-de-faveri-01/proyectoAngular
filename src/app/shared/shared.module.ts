@@ -4,20 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './components/form/form.component';
 import { RouterModule } from '@angular/router';
 
-
-
 @NgModule({
-  declarations: [
-    FormComponent
-  ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule
-  ],
-  exports: [
-    FormComponent
-  ]
+  declarations: [FormComponent],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
+  exports: [FormComponent],
 })
-export class SharedModule { }
+export class SharedModule {}

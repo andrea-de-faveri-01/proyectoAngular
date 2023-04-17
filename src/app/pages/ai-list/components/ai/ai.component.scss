@@ -1,27 +1,22 @@
-
-.card{
+.card {
   border-top: 1px solid;
-    border-radius: 15px 0px;
-    margin-top: 10px;
+  border-radius: 15px 0px;
+  margin-top: 10px;
 }
 
 .info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
- 
+
   display: grid;
 }
 
-
-
 .info-logo {
   width: 273px;
-    height: 200px;
-    border-left: 1px solid;
-    border-radius: 15px 0px 0px 0px ;
-    object-fit: cover;
-  
-  
+  height: 200px;
+  border-left: 1px solid;
+  border-radius: 15px 0px 0px 0px;
+  object-fit: cover;
 }
 
 .name {
@@ -30,16 +25,13 @@
   font-weight: 300;
   margin-left: 10px;
   margin-top: 95px;
-  
 }
 
 .name:hover {
   font-size: large;
   font-weight: 800;
   cursor: default;
-  
 }
-
 
 .cat {
   text-align: center;
@@ -47,21 +39,19 @@
   font-weight: 300;
   margin-left: 10px;
   margin-top: 95px;
- 
 }
 
 .cat:hover {
   font-size: large;
   font-weight: 800;
   cursor: default;
-  
 }
 
 .card-button {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border:  1px solid black;
+  border: 1px solid black;
   border-radius: 0px 0px 0px 15px;
 }
 .card-button button {
@@ -78,8 +68,5 @@
 }
 
 .card-button__delete {
-  
   color: red;
- 
-  
 }

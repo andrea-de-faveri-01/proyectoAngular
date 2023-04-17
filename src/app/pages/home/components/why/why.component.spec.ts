@@ -8,9 +8,8 @@ describe('WhyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WhyComponent ]
-    })
-    .compileComponents();
+      declarations: [WhyComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(WhyComponent);
     component = fixture.componentInstance;

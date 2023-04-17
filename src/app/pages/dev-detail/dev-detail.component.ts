@@ -14,7 +14,7 @@ export class DevDetailComponent {
   constructor(
     private actvateRoute: ActivatedRoute,
     private devsService: DevsService,
-    private router:Router
+    private router: Router
   ) {
     this.actvateRoute.params.subscribe((params) => {
       const devId = params['_id'];
@@ -25,7 +25,6 @@ export class DevDetailComponent {
   }
 
   public navigateToAiDetail(_id: string) {
-    this.router.navigate(['ai-detail',_id]);
-    }
-
+    this.router.navigate(['ai-detail', _id]);
+  }
 }

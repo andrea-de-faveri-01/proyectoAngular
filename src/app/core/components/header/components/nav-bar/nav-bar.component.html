@@ -1,10 +1,4 @@
-<p>nav-bar works!</p>
-
-<div>
-    <a
-    *ngFor="let link of navBarLinksElements"
-     [routerLink]="[link.url]"
-     class="link"
-     routerLinkActive="link--active"
-     > {{ link.content }}</a>
+<div class="font nav-container">
+    <a *ngFor="let link of navBarLinksElements" [routerLink]="[link.url]" class="link" routerLinkActive="link--active">
+        {{ link.content }}</a>
 </div>

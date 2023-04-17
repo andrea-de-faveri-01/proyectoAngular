@@ -6,12 +6,12 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: DevDetailComponent
-  }
+    component: DevDetailComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class DevDetailRoutingModule { }
+export class DevDetailRoutingModule {}

@@ -1,25 +1,25 @@
 <div *ngIf="aiToShow" class="card">
-        <div class="info">
-            <img class="info-logo" src="{{ aiToShow.logo }}" alt="">
-            <!-- <p>ID: {{ aiToShow._id }}</p> -->
+    <div class="info">
+        <img class="info-logo" src="{{ aiToShow.logo }}" alt="">
+        <!-- <p>ID: {{ aiToShow._id }}</p> -->
 
-            <p class="name"> {{ aiToShow.name }}</p>
-            <p class="cat"> {{ aiToShow.category }}</p>
+        <p class="name"> {{ aiToShow.name }}</p>
+        <p class="cat"> {{ aiToShow.category }}</p>
 
-            <!-- <p>YEAR: {{ aiToShow.year }}</p> -->
-            <!-- <p>DESCRIPTION: {{ aiToShow.description }}</p> -->
-            <!-- <p>PRICE: {{ aiToShow.price }}</p> -->
-            <!-- <a href="{{ aiToShow.link }}" target="_blank">LINK</a> -->
-        </div>
-        <div class="card-button">
-
-            <button class="card-button__info" (click)="navigateToDetail(aiToShow._id)">
-                INFO
-            </button>
-            <button class="card-button__edit" (click)="navigateToEditElement(aiToShow._id)">
-                EDIT
-            </button>
-            <button class="card-button__delete" (click)="removeAi()">DELETE</button>
-        </div>
-
+        <!-- <p>YEAR: {{ aiToShow.year }}</p> -->
+        <!-- <p>DESCRIPTION: {{ aiToShow.description }}</p> -->
+        <!-- <p>PRICE: {{ aiToShow.price }}</p> -->
+        <!-- <a href="{{ aiToShow.link }}" target="_blank">LINK</a> -->
     </div>
+    <div class="card-button">
+
+        <button class="card-button__info" (click)="navigateToDetail(aiToShow._id)">
+            INFO
+        </button>
+        <button class="card-button__edit" (click)="navigateToEditElement(aiToShow._id)">
+            EDIT
+        </button>
+        <button class="card-button__delete" (click)="removeAi()">DELETE</button>
+    </div>
+
+</div>

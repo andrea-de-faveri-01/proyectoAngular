@@ -6,22 +6,20 @@ import { AiI } from 'src/app/core/service/ais/models/api-ais.interface';
 @Component({
   selector: 'app-edit-element',
   templateUrl: './edit-element.component.html',
-  styleUrls: ['./edit-element.component.scss']
+  styleUrls: ['./edit-element.component.scss'],
 })
 export class EditElementComponent {
-
   public ai?: AiI;
 
-constructor(
-  private activatedRoute: ActivatedRoute,
-  private aisService: AisService
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private aisService: AisService
   ) {
-  this.activatedRoute.params.subscribe((params) => {
-     const aiId = params['_id'];
-     this.aisService.getAiById(aiId).subscribe((ai) => {
-      this.ai = ai;
-     })
-  })
-}
-
+    this.activatedRoute.params.subscribe((params) => {
+      const aiId = params['_id'];
+      this.aisService.getAiById(aiId).subscribe((ai) => {
+        this.ai = ai;
+      });
+    });
+  }
 }

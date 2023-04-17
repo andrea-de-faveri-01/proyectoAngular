@@ -18,7 +18,6 @@ import { AisService } from 'src/app/core/service/ais/ais.service';
 })
 export class FormComponent implements OnInit {
   @Input() public ai?: ApiAiI;
-  // @Input() public dev?: ApiDevI;
   @Input() public isEditMode: boolean = false;
 
   public aiForm?: FormGroup;
@@ -28,15 +27,15 @@ export class FormComponent implements OnInit {
   public imgSrc: string = '';
 
   constructor(
-    private formBuilder: FormBuilder, 
+    private formBuilder: FormBuilder,
     private router: Router,
     private aisService: AisService
-    ) {}
+  ) {}
 
   public ngOnInit(): void {
     this.initForm();
     this.aiForm?.get('logo')?.valueChanges.subscribe((value: string) => {
-     this.imgSrc = value;
+      this.imgSrc = value;
     });
   }
 
@@ -51,22 +50,22 @@ export class FormComponent implements OnInit {
     }
   }
   private createAi() {
- this.aisService.createAi(this.aiForm?.value).subscribe((ai) =>{
+    this.aisService.createAi(this.aiForm?.value).subscribe((ai) => {
       this.aiForm?.reset();
       this.hasSuccess = true;
       setTimeout(() => {
         this.hasSuccess = false;
       }, 5000);
-    })
-   
+    });
   }
 
   private editAi() {
-    if (!this.ai?._id) { return; }
-    this.aisService.editAi(this.aiForm?.value, this.ai._id).subscribe((ai) =>{
+    if (!this.ai?._id) {
+      return;
+    }
+    this.aisService.editAi(this.aiForm?.value, this.ai._id).subscribe((ai) => {
       this.router.navigate(['../ai-list']);
-    })
-   
+    });
   }
 
   private initForm() {
@@ -79,12 +78,12 @@ export class FormComponent implements OnInit {
       logo: new FormControl(this.ai?.logo || ''),
       year: new FormControl(this.ai?.year || '', [
         Validators.required,
-        Validators.min(2000),
+        Validators.min(1950),
       ]),
       lenguage: new FormControl(this.ai?.lenguage || ''),
       description: new FormControl(this.ai?.description || '', [
         Validators.required,
-        Validators.maxLength(150),
+        Validators.maxLength(500),
       ]),
       link: new FormControl(this.ai?.link || '', [Validators.required]),
       price: new FormControl(this.ai?.price || '', [Validators.required]),

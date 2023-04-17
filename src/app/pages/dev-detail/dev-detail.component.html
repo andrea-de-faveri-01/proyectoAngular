@@ -1,17 +1,14 @@
-
-<div
-class="detail font"
-*ngIf="devToShow"
->
-<img class="detail-logo" src= "{{ devToShow.logo }} " alt="">
-<p>ID: {{ devToShow._id }}</p>
-<p>NAME: {{ devToShow.name }}</p>
-<p>YEAR: {{ devToShow.year }}</p>
-<span class="detail-cont" >DEV'S AI:
-  <ul>
-      <li class="detail-id" *ngFor="let ai of devToShow.ais"><button class="detail-btn" (click)="navigateToAiDetail(ai._id)">
-              {{ ai._id  }}
-          </button></li>
-  </ul>
-</span>
-<a class="detail-link" href="{{ devToShow.link }}" target="_blank">LINK</a>
+<div class="detail font" *ngIf="devToShow">
+  <img class="detail-logo" src="{{ devToShow.logo }} " alt="">
+  <p>ID: {{ devToShow._id }}</p>
+  <p>NAME: {{ devToShow.name }}</p>
+  <p>YEAR: {{ devToShow.year }}</p>
+  <span class="detail-cont">DEV'S AI:
+    <ul>
+      <li class="detail-id" *ngFor="let ai of devToShow.ais"><button class="detail-btn"
+          (click)="navigateToAiDetail(ai._id)">
+          {{ ai._id }}
+        </button></li>
+    </ul>
+  </span>
+  <a class="detail-link" href="{{ devToShow.link }}" target="_blank">LINK</a>

@@ -1,31 +1,32 @@
 <div *ngIf="devToShow" class="card">
-        <div class="info">
-            <img class="info-logo" src="{{ devToShow.logo }} " alt="">
-            <!-- <p>ID: {{ devToShow._id }}</p> -->
-            <p class="name">{{ devToShow.name }}</p>
-            <span >
-                <ul class="box" >
-                    <li class="box-id" *ngFor="let ai of devToShow.ais"><button class="box-btn" (click)="navigateToAiDetail(ai._id)">
-                            {{ ai._id  }}
-                        </button></li>
-                </ul>
-            </span>
-            <!-- <p>YEAR: {{ devToShow.year }}</p> -->
-            <!-- <a href="{{ devToShow.link }}" target="_blank">LINK</a> -->
-        </div>
-        <div class="card-button">
+    <div class="info">
+        <img class="info-logo" src="{{ devToShow.logo }} " alt="">
+        <!-- <p>ID: {{ devToShow._id }}</p> -->
+        <p class="name">{{ devToShow.name }}</p>
+        <span>
+            <ul class="box">
+                <li class="box-id" *ngFor="let ai of devToShow.ais"><button class="box-btn"
+                        (click)="navigateToAiDetail(ai._id)">
+                        {{ ai._id }}
+                    </button></li>
+            </ul>
+        </span>
+        <!-- <p>YEAR: {{ devToShow.year }}</p> -->
+        <!-- <a href="{{ devToShow.link }}" target="_blank">LINK</a> -->
+    </div>
+    <div class="card-button">
 
-            <button class="card-button__info" (click)="navigateToDetail(devToShow._id)">
-                INFO
-            </button>
-            <!-- <button class="card-button__edit" (click)="navigateToEditElement(devToShow._id)">
+        <button class="card-button__info" (click)="navigateToDetail(devToShow._id)">
+            INFO
+        </button>
+        <!-- <button class="card-button__edit" (click)="navigateToEditElement(devToShow._id)">
                 EDIT
             </button> -->
-            <button class="card-button__edit" (click)="navigateToComingSoon()">
-                EDIT
-            </button>
+        <button class="card-button__edit" (click)="navigateToComingSoon()">
+            EDIT
+        </button>
 
-            <button class="card-button__delete" (click)="removeDev()">Remove</button>
-        </div>
-
+        <button class="card-button__delete" (click)="removeDev()">Remove</button>
     </div>
+
+</div>

@@ -4,19 +4,9 @@ import { HeaderComponent } from './header.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { RouterModule } from '@angular/router';
 
-
-
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    NavBarComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  exports: [
-    HeaderComponent
-  ]
+  declarations: [HeaderComponent, NavBarComponent],
+  imports: [CommonModule, RouterModule],
+  exports: [HeaderComponent],
 })
-export class HeaderModule { }
+export class HeaderModule {}
