@@ -77,15 +77,17 @@ img:hover {
 
 @media (max-width: 600px) {
   .info-logo{
-  width: 130px;
+  width: 122px;
   height: 110px;
   }
 
   .name {
-    margin-top: 20px
+    margin-top: 18px;
+    justify-content: center;
   }
 
   .cat {
-    margin-top: 20px;
+    margin-top: 18px;
+    justify-content: center;
   }
 }
