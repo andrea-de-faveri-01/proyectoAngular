@@ -5,6 +5,6 @@
     </div>
 
     <div class="ai-list" *ngIf="ais">
-        <app-ai *ngFor="let ai of ais" [aiToShow]="ai"></app-ai>
+        <app-ai *ngFor="let ai of ais | slicePage: currentPage:25" [aiToShow]="ai"></app-ai>
     </div>
 </div>

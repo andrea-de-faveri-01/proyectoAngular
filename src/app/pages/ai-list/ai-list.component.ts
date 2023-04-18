@@ -2,6 +2,8 @@ import { AisService } from './../../core/service/ais/ais.service';
 import { AiI } from './../../core/service/ais/models/api-ais.interface';
 import { Component, OnInit } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-ai-list',
   templateUrl: './ai-list.component.html',
@@ -11,6 +13,7 @@ export class AiListComponent implements OnInit {
   public ais?: AiI[];
   public originalAis?: AiI[];
   public inputValue: string = '';
+  public currentPage: number = 1;
 
   constructor(private aisService: AisService) {}
 
