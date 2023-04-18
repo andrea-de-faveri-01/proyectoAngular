@@ -1,14 +1,17 @@
-// .nav-container {
-//   text-align: center;
-//   height: 60px;
-// }
+
 
 .nav-container {
+    
+    position: absolute;
+    top: 13%;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 8%;
     width: 100%;
+    z-index: 9999;
   }
 
   .link {
@@ -19,13 +22,13 @@
   
     &--active {
       text-decoration: underline;
-      font-size: 5vw;
+      font-size: 4vw;
     }
   }
   
   @media (hover: hover) {
     .link:hover {
-      font-size: 5vw;
+        text-decoration: underline;
     }
   }
 

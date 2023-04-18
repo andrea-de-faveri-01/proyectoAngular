@@ -60,6 +60,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'about',
+    loadChildren: () =>
+      import('./pages/about/about.module').then(
+        (m) => m.AboutModule
+      ),
+  },
+  {
     path: '**',
     loadChildren: () =>
       import('./pages/not-found/not-found.module').then(

@@ -2,9 +2,10 @@
   display: flex;
 
   &__img {
-    height: 400px;
+    height: 300px;
     width: auto;
     object-fit: cover;
     margin-left: 40px;
+    border-radius: 15px 0 0 15px;
   }
 }
