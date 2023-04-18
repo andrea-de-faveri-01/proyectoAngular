@@ -25,10 +25,6 @@ export class DevComponent {
     this.router.navigate(['ai-detail', _id]);
   }
 
-  public navigateToEditElement(_id: string) {
-    this.router.navigate(['edit-element', _id]);
-  }
-
   public navigateToComingSoon() {
     this.router.navigate(['coming-soon']);
   }
