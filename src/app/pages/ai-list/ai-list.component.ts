@@ -21,7 +21,10 @@ export class AiListComponent implements OnInit {
   }
 
   public removeAi(_id: string) {
-    this.aisService.deleteAi(_id).subscribe(() => this.getAis());
+    console.log("d");
+    this.aisService.deleteAi(_id)
+      .subscribe(() => this.getAis(), error => console.log(error));
+    console.log("e");
   }
 
   public filterAis() {
@@ -31,7 +34,10 @@ export class AiListComponent implements OnInit {
   }
 
   public getAis() {
+    console.log("f");
     this.aisService.getAis().subscribe((ais: AiI[]) => {
+      console.log("g");
+      
       this.ais = ais;
       this.originalAis = ais;
     });

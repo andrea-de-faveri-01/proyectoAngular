@@ -13,8 +13,11 @@ export class AiComponent {
   @Input() public aiToShow?: AiI;
   @Output() public onRemoveAi = new EventEmitter<void>();
 
-  public removeAi() {
+  public removeAi() { 
+    console.log("b");
+    
     this.onRemoveAi.emit();
+    console.log("c");
   }
 
   public navigateToDetail(_id: string) {
