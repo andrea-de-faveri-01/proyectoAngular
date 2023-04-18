@@ -11,6 +11,7 @@ export class DevListComponent implements OnInit {
   public devs?: DevI[];
   public originalDevs?: DevI[];
   public inputValue: string = '';
+  public currentPage: number = 1;
 
   constructor(private devsService: DevsService) {}
 

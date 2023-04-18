@@ -1,4 +1,5 @@
 .detail {
+  width: 100%;
   margin-top: 20px;
   border: 1px solid black;
   border-right: none;
@@ -46,4 +47,14 @@
 
 .detail-link {
   font-size: xx-large;
+}
+
+@media only screen and (max-width: 768px) {
+  .detail {
+    display: flex;
+    flex-direction: column;
+  }
+  .detail-logo {
+    margin-bottom: 20px;
+  }
 }

@@ -3,6 +3,6 @@
         <input class="box-search" placeholder="Type a Dev name" [(ngModel)]="inputValue" (input)="filterDevs()">
     </div>
     <div *ngIf="devs">
-        <app-dev *ngFor="let dev of devs" [devToShow]="dev"></app-dev>
+        <app-dev *ngFor="let dev of devs | slicePage: currentPage:25" [devToShow]="dev"></app-dev>
     </div>
 </div>

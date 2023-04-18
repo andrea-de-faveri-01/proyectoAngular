@@ -31,3 +31,13 @@
   padding: 15px;
   font-size: xx-large;
 }
+
+@media only screen and (max-width: 768px) {
+  .detail {
+    display: flex;
+    flex-direction: column;
+  }
+  .detail-logo {
+    margin-bottom: 20px;
+  }
+}
