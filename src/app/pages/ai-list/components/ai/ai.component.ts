@@ -14,10 +14,7 @@ export class AiComponent {
   @Output() public onRemoveAi = new EventEmitter<void>();
 
   public removeAi() { 
-    console.log("b");
-    
     this.onRemoveAi.emit();
-    console.log("c");
   }
 
   public navigateToDetail(_id: string) {

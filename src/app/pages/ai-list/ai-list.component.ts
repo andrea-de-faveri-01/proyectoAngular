@@ -21,10 +21,7 @@ export class AiListComponent implements OnInit {
   }
 
   public removeAi(_id: string) {
-    console.log("d");
-    this.aisService.deleteAi(_id)
-      .subscribe(() => this.getAis(), error => console.log(error));
-    console.log("e");
+    this.aisService.deleteAi(_id).subscribe(() => this.getAis());
   }
 
   public filterAis() {
@@ -34,10 +31,7 @@ export class AiListComponent implements OnInit {
   }
 
   public getAis() {
-    console.log("f");
     this.aisService.getAis().subscribe((ais: AiI[]) => {
-      console.log("g");
-      
       this.ais = ais;
       this.originalAis = ais;
     });
@@ -46,16 +40,15 @@ export class AiListComponent implements OnInit {
   public previousPage() {
     this.currentPage--;
   }
-  
+
   nextPage() {
     this.currentPage++;
   }
-  
+
   public get totalPages(): number {
     if (!this.ais || !this.ais.length) {
       return 0;
     }
     return Math.ceil(this.ais.length / this.pageSize);
   }
-
 }
