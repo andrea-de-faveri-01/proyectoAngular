@@ -12,6 +12,7 @@ export class DevListComponent implements OnInit {
   public originalDevs?: DevI[];
   public inputValue: string = '';
   public currentPage: number = 1;
+  public pageSize: number = 10;
 
   constructor(private devsService: DevsService) {}
 
@@ -35,4 +36,20 @@ export class DevListComponent implements OnInit {
       this.originalDevs = devs;
     });
   }
+
+public previousPage() {
+  this.currentPage--;
+}
+
+nextPage() {
+  this.currentPage++;
+}
+
+public get totalPages(): number {
+  if (!this.devs || !this.devs.length) {
+    return 0;
+  }
+  return Math.ceil(this.devs.length / this.pageSize);
+}
+
 }

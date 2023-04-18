@@ -4,7 +4,11 @@
             (input)="filterAis()">
     </div>
 
-    <div class="ai-list" *ngIf="ais">
-        <app-ai *ngFor="let ai of ais | slicePage: currentPage:25" [aiToShow]="ai"></app-ai>
-    </div>
+    <div class="ai-list" *ngIf="ais && ais.length > 0">
+        <app-ai *ngFor="let ai of ais | slicePage: currentPage: pageSize" [aiToShow]="ai"></app-ai>
+        <div *ngIf="totalPages > 1">
+            <button [disabled]="currentPage <= 1" (click)="previousPage()">Previous</button>
+            <button [disabled]="currentPage >= totalPages" (click)="nextPage()">Next</button>
+          </div>
+        </div>
 </div>

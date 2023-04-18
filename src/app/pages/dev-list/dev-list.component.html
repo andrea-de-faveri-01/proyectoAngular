@@ -2,7 +2,11 @@
     <div class="box">
         <input class="box-search" placeholder="Type a Dev name" [(ngModel)]="inputValue" (input)="filterDevs()">
     </div>
-    <div *ngIf="devs">
-        <app-dev *ngFor="let dev of devs | slicePage: currentPage:25" [devToShow]="dev"></app-dev>
-    </div>
+    <div *ngIf="devs && devs.length > 0">
+        <app-dev *ngFor="let dev of devs | slicePage: currentPage: pageSize" [devToShow]="dev"></app-dev>
+        <div *ngIf="totalPages > 1">
+            <button [disabled]="currentPage <= 1" (click)="previousPage()">Previous</button>
+            <button [disabled]="currentPage >= totalPages" (click)="nextPage()">Next</button>
+          </div>
+        </div>
 </div>

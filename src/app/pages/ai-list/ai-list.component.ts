@@ -1,8 +1,6 @@
+import { Component, OnInit } from '@angular/core';
 import { AisService } from './../../core/service/ais/ais.service';
 import { AiI } from './../../core/service/ais/models/api-ais.interface';
-import { Component, OnInit } from '@angular/core';
-
-
 
 @Component({
   selector: 'app-ai-list',
@@ -14,6 +12,7 @@ export class AiListComponent implements OnInit {
   public originalAis?: AiI[];
   public inputValue: string = '';
   public currentPage: number = 1;
+  public pageSize: number = 10;
 
   constructor(private aisService: AisService) {}
 
@@ -37,4 +36,20 @@ export class AiListComponent implements OnInit {
       this.originalAis = ais;
     });
   }
+
+  public previousPage() {
+    this.currentPage--;
+  }
+  
+  nextPage() {
+    this.currentPage++;
+  }
+  
+  public get totalPages(): number {
+    if (!this.ais || !this.ais.length) {
+      return 0;
+    }
+    return Math.ceil(this.ais.length / this.pageSize);
+  }
+
 }
