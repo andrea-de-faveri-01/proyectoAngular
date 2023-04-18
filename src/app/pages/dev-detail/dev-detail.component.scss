@@ -49,14 +49,14 @@
   font-size: xx-large;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 600px) {
   .detail {
     display: flex;
     flex-direction: column;
   }
   .detail-logo {
-    width: 400px;
-  height: 400px;
+    width: 355px;
+  height: 355px;
     margin-bottom: 20px;
   }
 }
